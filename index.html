@@ -22,9 +22,12 @@
   <link rel="stylesheet" href="css/selectmenu.css">
 
   <meta name="theme-color" content="#fafafa">
-  <meta name="color-scheme" content="dark light">
+  <!-- <meta name="color-scheme" content="dark light"> -->
 
   <style>
+    :root {
+      color-scheme: light dark;
+    }
     @media (prefers-color-scheme: dark) {
       html {
         color: white;
@@ -46,7 +49,10 @@
 <body>
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <header>
+    <h1>Modal</h1>
+  </header>
+
 
   <dialog id="favDialog">
     <form method="dialog">
@@ -71,8 +77,12 @@
   </dialog>
 
   <p>
-    <button id="updateDetails">Update details</button>
+    <button id="updateDetails">Open modal</button>
   </p>
+
+  <header>
+    <h1>Select Menu</h1>
+  </header>
 
   <selectmenu class="bubble">
     <div class="anchor" slot="button" behavior="button">
@@ -100,7 +110,6 @@
           <option value="">🥰</option>
           <option value="">😗</option>
           <option value="">😙</option>
-          <option value="">🥲</option>
           <option value="">😚</option>
           <option value="">🙂</option>
           <option value="">🤗</option>
@@ -127,6 +136,26 @@
         </div>
       </div>
     </div>
+  </selectmenu>
+
+  <selectmenu class="multiselect">
+    <div slot="button" behavior="button">
+      <ul class="selected-values"><li><span class="label">Anchovies</span><span class="remove"><svg viewBox="64 64 896 896" focusable="false" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></span></li><li><span class="label">Gorgonzola</span><span class="remove"><svg viewBox="64 64 896 896" focusable="false" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></span></li></ul>
+    </div>
+    <option value="Broccolini">Broccolini</option>
+    <option value="Pancetta">Pancetta</option>
+    <option value="Potato">Potato</option>
+    <option value="Sausage">Sausage</option>
+    <option value="Gorgonzola" selected="">Gorgonzola</option>
+    <option value="Mushroom">Mushroom</option>
+    <option value="Black olives">Black olives</option>
+    <option value="Anchovies" selected="">Anchovies</option>
+    <option value="Capers">Capers</option>
+    <option value="Radicchio">Radicchio</option>
+    <option value="Eggplant">Eggplant</option>
+    <option value="Capsicum">Capsicum</option>
+    <option value="Garlic">Garlic</option>
+    <option value="Onions">Onions</option>
   </selectmenu>
 
   <section id="forms">
